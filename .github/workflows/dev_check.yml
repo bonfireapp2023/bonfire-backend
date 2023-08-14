@@ -1,0 +1,37 @@
+name: Django CI/CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Activate Conda environment
+        run: conda env create -f environment.yml
+        shell: bash
+
+      - name: Run Django tests
+        run: python manage.py test
+
+      - name: Export Conda environment
+        run: conda env export > environment.yml
+
+      - name: Commit and push environment.yml
+        run: |
+          git config --global user.name "Your Name"
+          git config --global user.email "your@email.com"
+          git add environment.yml
+          git commit -m "Update environment.yml"
+          git push origin master

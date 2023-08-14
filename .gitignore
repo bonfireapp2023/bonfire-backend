@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media
+
+# If using PyCharm:
+.idea/
+
+# If using Visual Studio Code:
+.vscode/
+
+# Virtual environment:
+venv/
+env/
+env38/
+*.env
+
+# If you use Jupyter notebooks:
+.ipynb_checkpoints/
+
+# Testing and debugging:
+debug.log
+debug.log.*
+logs/
+*.log.*
+*.swp
+
+# Coverage directory used by tools like coverage.py:
+htmlcov/
+
+# Translations
+*.mo
+*.po
+
+# Dependency directories:
+node_modules/
+bower_components/
+pip-modules/
+
+# Docker / Compose:
+docker-compose.yml
+docker-compose.override.yml
+docker-compose.prod.yml
+docker-compose.test.yml
+db.dump
+
+# pyenv
+.python-version
+
+# Editors
+*~
+*.swp
+*.swo
+
+# Secret keys
+*.secret
+
+# Environment variables
+*.env
+
+# Compiled Python modules
+__pycache__/
+
+# Compiled C extensions
+*.so
+
+# MyPy
+.mypy_cache/
+
+# Pyre
+.pyre/
