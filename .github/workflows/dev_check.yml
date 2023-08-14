@@ -26,4 +26,5 @@ jobs:
 
       - name: Run Django tests
         run: |
+          cd bonfire
           python manage.py test
